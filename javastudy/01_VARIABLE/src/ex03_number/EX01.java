@@ -38,6 +38,7 @@ public class EX01 {
 		// 연습
 		// a = 7이고, b = 2이므로
 		// a 나누기 b는 3.5이다
+		//double 문으로 다 안 바꿀 시 소수점이 안 찍힌다.
 		double result = (double)a / (double)b;
 		System.out.println(result);
 	}

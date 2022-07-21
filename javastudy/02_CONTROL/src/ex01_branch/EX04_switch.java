@@ -37,7 +37,7 @@ public class EX04_switch {
 		String manager;
 		
 		switch(floor) {
-			case 1:
+			case 1: // case 1과 2가 같은 결과가 나오기 떄문에 case 2에만 결과값이 나오게 쓴다.
 			case 2: manager = "전지현"; 
 				break;
 			case 3:
@@ -56,7 +56,7 @@ public class EX04_switch {
 		// 짝수, 홀수
 		
 		int n = 1;
-		switch(n % 2) {
+		switch(n % 2) { // switch 문 안에서도 연산식으로도 작성이 가능
 			case 0 : System.out.println("짝수");
 				break;
 			default : System.out.println("홀수");
@@ -69,6 +69,9 @@ public class EX04_switch {
 		// 7 ~ 9월 : 3분기
 		// 10 ~ 12월 : 4분기
 		int month = 12;
+		// 1, 2, 3월을 1씩 빼면 0,1,2 가 되며 이것은 3을 나눠 나머지는 다르나 몫이 같다는걸 
+		// 알 수 있다. 다른 분기 월도 마찬가지. 4, 5, 6 월을 -1씩 빼면 3,4,5가 되며 이것은
+		// 3을 몫으로 나눈 값이 1로 동일하다.
 		
 		switch((month-1) / 3) {
 			case 0 : System.out.println("1분기");
@@ -108,8 +111,9 @@ public class EX04_switch {
 		// 2등급 : 실행 읽기
 		// 3등급 : 읽기
 		// 나머지 : 없음
+		// 처음 접해보는 방식이니 기억할 것
 		
-		int level = 3;
+		int level = 1;
 		String right = "";
 		
 		switch(level) {

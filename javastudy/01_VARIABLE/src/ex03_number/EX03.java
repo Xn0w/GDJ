@@ -11,6 +11,7 @@ public class EX03 {
 		// 연습
 		// x에 10이 있고 y에 20이 있다.
 		// x와 y에 저장된 값을 서로 교환하시오.
+		// 거진 단골로 나오는 값 바꾸기 기억 할 것
 		int x = 10;
 		int y = 20;
 		
@@ -33,6 +34,7 @@ public class EX03 {
 		
 		// 연습
 		// 잔액에서 이자 5%를 받았음을 나타내자.
+		// 10% 아래의 복합 대입 연산자 문제는 많이 접해본적이 없으니 기억 할 것
 		long balance = 10000;
 		balance *= 1.05; // balance를 double로 promotion해서 처리한다.
 		System.out.println(balance);
