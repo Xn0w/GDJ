@@ -39,7 +39,7 @@ public class EX01 {
 			for(int n = 0; n < 6; n++) {
 				code += (int)(Math.random() * 10);
 			}
-			System.out.print(code);
+			System.out.println(code);
 			
 			/* 내 답
 			for(int n = 0; n < 6; n++) {
@@ -47,6 +47,23 @@ public class EX01 {
 			System.out.print(code);
 			}
 			*/
+			// 'A' = 65, 'a' = 97
+			
+			System.out.println((char)((int)(Math.random() * 26) + 'A'));
+			
+			// 연습
+			// 6자리 영문(대문자 + 소문자)인증번호 만들기
+			String code2 = "";
+			for(int n = 0; n < 6; n++) {
+				if(Math.random() < 0.5) {
+					code2 += ((char)((int)(Math.random() * 26) + 'A'));
+				} else {
+					code2 += ((char)((int)(Math.random() * 26) + 'a'));
+				}
+			}
+			System.out.println(code2);
+			
+			
 	}
 	
 }
