@@ -1,6 +1,6 @@
 package ex02_loop;
 
-public class Ex04_continue {
+public class EX04_continue {
 
 	public static void main(String[] args) {
 		
