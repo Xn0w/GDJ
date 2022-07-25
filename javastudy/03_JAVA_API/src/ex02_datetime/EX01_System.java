@@ -5,7 +5,7 @@ public class EX01_System {
 	public static void main(String[] args) {
 		
 		// 1. 타임스탬프(timestamp)
-		// 1970-01-01 0:00부터 1초마다 증가하는 long 타입의 정수값
+		// 1970-01-01 0:00부터 1/1000초마다 증가하는 long 타입의 정수값
 		long timestamp = System.currentTimeMillis();
 		System.out.println(timestamp);
 		

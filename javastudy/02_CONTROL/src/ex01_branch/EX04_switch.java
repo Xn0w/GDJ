@@ -40,10 +40,10 @@ public class EX04_switch {
 			case 1: // case 1과 2가 같은 결과가 나오기 떄문에 case 2에만 결과값이 나오게 쓴다.
 			case 2: manager = "전지현"; 
 				break;
-			case 3:
+			case 3: // Case 1 2와 같은 상황
 			case 4: manager = "한지민";
 				break;
-			case 5:
+			case 5: // Case 1 2와 같은 상황
 			case 6: manager = "박은빈";
 				break;
 			default: manager = "박보검";

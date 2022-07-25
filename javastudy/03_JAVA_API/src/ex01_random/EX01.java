@@ -30,7 +30,7 @@ public class EX01 {
 		// 주사위 두 개 랜덤숫자
 		
 			for(int n = 0; n < 2; n++) {
-				int dice = (int)(Math.random() * 6) + 1;
+				int dice = (int)((Math.random() * 6) + 1);
 			System.out.println(dice);
 			}
 			
