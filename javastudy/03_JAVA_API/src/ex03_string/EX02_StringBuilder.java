@@ -59,7 +59,7 @@ public class EX02_StringBuilder {
 			sbPaging.append(n + " ");
 		}
 		String paging = sbPaging.toString();
-		System.out.println(sbPaging);
+		System.out.println(paging);
 		
 	}
 

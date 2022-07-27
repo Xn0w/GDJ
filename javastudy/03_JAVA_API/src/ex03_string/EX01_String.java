@@ -143,7 +143,7 @@ public class EX01_String {
 		String replacedIp = ip.replaceAll(".", "_"); // 192_168_101_91를 기대
 		System.out.println(replacedIp);
 		
-		// 13. 빈 문자열인지 여부를 검사한 뒤 boolean(true, false) 반환
+		// 13. isEmpty() 빈 문자열인지 여부를 검사한 뒤 boolean(true, false) 반환
 		String id = " ";
 		if(id.isEmpty()) {
 			System.out.println("빈 문자열");

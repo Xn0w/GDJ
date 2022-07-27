@@ -24,7 +24,6 @@ public class EX02_Scanner {
 		System.out.println(name);
 		System.out.println(age);
 		
-		sc.close(); //생략이 가능하다.
 		
 		// 연습. char 타입의 성별을 입력 받기
 		System.out.print("성별(남/여)을 입력하세요 >>> ");
@@ -33,6 +32,7 @@ public class EX02_Scanner {
 		System.out.println(gender);
 		
 		sc.close();
+		
 	}
 
 }
