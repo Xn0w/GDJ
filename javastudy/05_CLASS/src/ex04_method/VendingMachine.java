@@ -2,6 +2,7 @@ package ex04_method;
 
 public class VendingMachine {
 
+	//복습할 것
 	String getCoffee(int money, int button) {
 		
 		String[] menu = {"아메리카노", "카페라떼"};

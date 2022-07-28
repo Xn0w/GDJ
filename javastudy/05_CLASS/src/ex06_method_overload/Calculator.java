@@ -19,8 +19,9 @@ public class Calculator {
 	int add(int a, int b, int c, int d) {
 		return a + b + c + d;
 	}
-	
+		
 	// 복습할 것
+
 	int add(int[] arr) {
 		int total = 0;
 		for(int n : arr) {
@@ -28,5 +29,6 @@ public class Calculator {
 		}
 		return total;
 	}
+
 	
 }
