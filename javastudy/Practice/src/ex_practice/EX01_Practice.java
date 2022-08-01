@@ -317,6 +317,7 @@ public class EX01_Practice {
 	}
 	
 	public static void q9() {
+		
 		BankAccount me = new BankAccount("1234", 50000L);
 		BankAccount mom = new BankAccount("4321", 50000L);
 		
@@ -324,6 +325,8 @@ public class EX01_Practice {
 		
 		me.inquiry();
 		mom.inquiry();
+		
+		
 	}
 	
 	public static void q10() {
