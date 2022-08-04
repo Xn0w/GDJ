@@ -10,9 +10,9 @@ public class WeekScheduler {
 	private Scanner sc;
 	
 	public WeekScheduler(int nthWeek) {
+		sc = new Scanner(System.in);
 		this.nthWeek = nthWeek;
 		week = new Day[7];
-		sc = new Scanner(System.in);
 	}
 	
 	private void makeSchedule() {
@@ -20,7 +20,7 @@ public class WeekScheduler {
 		System.out.print("요일 입력 >>> ");
 		String dayName = sc.next().substring(0, 1);
 		sc.nextLine();
-		for(int i = 0; i < week.length; i++) {
+		for(int i = 0; i < week.length; i++) { 
 			if(dayName.equals(dayNames[i])) {
 				if(week[i] == null) {	// 등록된 스케줄이 없으면
 					System.out.print("스케줄 입력 >>> ");
@@ -119,7 +119,7 @@ public class WeekScheduler {
 	public void manage() {
 		
 		while(true) {
-			
+			// 실행 시 나오는 첫 출력문
 			System.out.print("1.등록 2.수정 3.삭제 4.전체조회 0.종료 >>> ");
 			int choice = sc.nextInt();  // 숫자
 			sc.nextLine();				// Enter

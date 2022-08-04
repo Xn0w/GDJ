@@ -6,7 +6,7 @@ public class Library {
 
 	private Scanner sc;
 	private Book[] books;
-	private int idx;	
+	private int idx;
 	
 	public Library() {
 		sc = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class Library {
 			return;
 		}
 		System.out.println("===책삭제===");
-		System.out.println("삭제할 책의 번호 >>> ");
+		System.out.print("삭제할 책의 번호 >>> ");
 		int bookNo = sc.nextInt();
 		for(int i = 0; i < idx; i++) {
 			if(books[i].getBookNo() == bookNo) {
@@ -52,18 +52,18 @@ public class Library {
 			return;
 		}
 		System.out.println("===책조회===");
-		System.out.println("조회할 책 제목 입력 >>> ");
+		System.out.print("조회할 책제목 입력 >>> ");
 		String title = sc.next();
 		for(int i = 0; i < idx; i++) {
-			// 저장된 책 제목 : books[i].getTitle
+			// 저장된 책 제목 : books[i].getTitle()
 			// 조회할 책 제목 : title
 			// String의 동등비교 : equals() 메소드
-			if(books[i].getTitle().equals(title)) {
+			if(books[i].getTitle().equals(title)) {  // if(title.equals(books[i].getTitle())
 				System.out.println(books[i]);
-				return; // findBook() 메소드 종료
+				return;  // findBook() 메소드 종료
 			}
 		}
-		System.out.println("제목이" + title + "인 책은 없습니다");
+		System.out.println("제목이 " + title + "인 책은 없습니다.");
 	}
 	
 	private void printAllBooks() {
@@ -81,22 +81,17 @@ public class Library {
 		
 		while(true) {
 			System.out.print("1.추가 2.삭제 3.조회 4.전체목록 0.프로그램종료 >>> ");
-			int choice = sc.nextInt();  // 번호를 누르고
-			sc.nextLine();				// 엔터를 누를테니까
+			int choice = sc.nextInt();
+			sc.nextLine();
 			switch(choice) {
-			case 1: addBook();
-				break;
-			case 2: removeBook();
-				break;
-			case 3: findBook();
-				break;
-			case 4: printAllBooks();
-				break;
+			case 1: addBook(); break;
+			case 2: removeBook(); break;
+			case 3: findBook(); break;
+			case 4: printAllBooks(); break;
 			case 0: System.out.println("Library 프로그램을 종료합니다. 감사합니다.");
-				return;		//manage() 메소드 종료
+					return;  // manage() 메소드 종료
 			default: System.out.println("알 수 없는 명령입니다. 다시 시도하세요.");
 			}
-			
 		}
 		
 	}

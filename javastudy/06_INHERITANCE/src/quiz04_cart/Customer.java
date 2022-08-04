@@ -60,7 +60,8 @@ public class Customer {
 			Product product = cart[i];
 			System.out.println(product.getName() + "  " + product.getPrice() + "원");
 		}
-		System.out.println("-----------------------");
+		
+		System.out.println("------------------");
 		System.out.println("구매총액 " + total + "원");
 		System.out.println("보너스 " + bonusPoint + "원");
 		System.out.println("남은돈 " + money + "원");

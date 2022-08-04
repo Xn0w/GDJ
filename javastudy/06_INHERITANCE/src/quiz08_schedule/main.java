@@ -6,6 +6,8 @@ public class main {
 
 		WeekScheduler scheduler = new WeekScheduler(38);
 		scheduler.manage();
+		
+		// new WeekScheduler().manage();
 	}
 
 }
