@@ -15,9 +15,9 @@ public class Main {
 		hobbies[4] = "집콕";
 		
 		for(int i = 0; i < hobbies.length; i++) {
-			
+			if(hobbies[i].equals("수영")) {
 			System.out.println("취미가 나와 같군요");
-				
+			}
 		}
 	}
 	
@@ -51,6 +51,7 @@ public class Main {
 		System.out.print("나이 입력(선택) >>> ");
 		String strAge = sc.nextLine();	// 입력 없이 Enter만 누르면 strAge는 빈 문자열을 가짐.
 		int Age = Integer.parseInt(strAge);
+		
 		System.out.println("이름 : " + name + ", 나이 :  " + Age + "살");
 		
 	}

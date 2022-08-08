@@ -19,6 +19,8 @@ public class Main {
 				throw new RuntimeException("나이는 0 이상 100 이하만 가능합니다.");
 			}	// 해당 메세지는 객체 e에 들어있다 생각하면 좋다.
 			System.out.println(age >= 20 ? "성인" : "미성년자");
+		} catch (RuntimeException e) {
+			System.out.println(e.getMessage());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {

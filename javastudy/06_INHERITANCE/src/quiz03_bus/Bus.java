@@ -38,12 +38,10 @@ public class Bus {
 					System.out.println((i + 1) + "," + person.getName());
 					// System.out.println((i + 1) + "," + seat.getPerson().getName());
 					// System.out.println((i + 1) + "," + seats[i].getPerson().getName());
-				} else{
+				} else {
 					System.out.println((i + 1) + ". 비어 있음");
 				}
 			}
 		}
 	}	
-	
-	
 }
