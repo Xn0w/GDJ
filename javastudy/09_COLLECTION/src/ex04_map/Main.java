@@ -13,7 +13,7 @@ public class Main {
 		
 		// 추가
 		// 새로운 key값을 사용하면 추가
-		dictionary.put("apple", "사과");		// put(key, value)
+		// put(key, value)
 		dictionary.put("banana", "바나나"); // 
 		dictionary.put("tomato", "토마토"); // 
 		dictionary.put("mango", "망고"); // 

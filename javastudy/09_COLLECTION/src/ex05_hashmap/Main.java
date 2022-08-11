@@ -103,7 +103,6 @@ public class Main {
 		list.add(map1);
 		list.add(map2);
 		list.add(map3);
-		
 		for(Map<String,Object> map : list) {	//List
 			for(Map.Entry<String, Object> entry : map.entrySet()) {	//Map
 				System.out.println(entry.getKey() + ":" + entry.getValue());
