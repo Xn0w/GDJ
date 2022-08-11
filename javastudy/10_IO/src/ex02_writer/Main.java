@@ -87,9 +87,9 @@ public class Main {
 		File file = new File("C:\\storage", "m3.txt");
 		try (FileWriter fw = new FileWriter(file)) {
 			
-			fw.write("나는 아이언맨이다.");
+			fw.write("apple");
 			fw.write("\n");
-			fw.write("너는 타노스냐?\n");
+			fw.write("mango\n");
 			
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -152,7 +152,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		m5();
+		m3();
 	}
 
 }
