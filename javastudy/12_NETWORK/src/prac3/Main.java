@@ -22,7 +22,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("날짜(yyyymmdd) >>> ");
 		String targetDt = sc.next();
-		
+	
 		try {
 			key = URLEncoder.encode(key, "UTF-8");
 			targetDt = URLEncoder.encode(targetDt, "UTF-8");
@@ -75,7 +75,7 @@ public class Main {
 	}
 	
 	public static void createFile(String response) {
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\storage\\boxoffice.xml"))) {
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\storage\\boxoffice.txt"))) {
 			bw.write(response);
 			bw.flush();
 		} catch(IOException e) {

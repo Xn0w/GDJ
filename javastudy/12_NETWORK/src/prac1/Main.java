@@ -63,7 +63,6 @@ public static void m1() {
 			System.out.println("API 접속 실패");
 		}
 		
-		
 		// 입력 스트림(응답) 생성
 		// 1. 응답 성공 시 정상 스트림, 실패 시 에러 스트림
 		// 2. 응답 데이터는 StringBuilder에 저장

@@ -92,7 +92,7 @@ public class Main2_JSON {
 		String response = sb.toString();
 		
 		// XML File 생성
-		File file = new File("C:\\storage", "api1.json");
+		File file = new File("C:\\storage", "api1.xml");
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(file));
 			bw.write(response);
@@ -392,7 +392,7 @@ public class Main2_JSON {
 	}
 	
 	public static void main(String[] args) {
-		m8();
+		m1();
 	}
 	
 }
