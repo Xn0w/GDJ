@@ -116,7 +116,7 @@ SELECT B.EMPLOYEE_ID, B.FIRST_NAME, B.SALARY
           FROM (SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
                   FROM EMPLOYEES
                  ORDER BY SALARY DESC) A) B
- WHERE B.RN = 1;                
+ WHERE B.RN BETWEEN 1 AND 1;               
                  
 -- 10. 연봉 TOP 11 ~ 20 사원의 EMPLOYEE_ID, FIRST_NAME, SALARY를 조회하시오.
 
