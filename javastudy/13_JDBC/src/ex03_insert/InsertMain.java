@@ -30,15 +30,22 @@ public class InsertMain {
 		Connection con = null;
 		PreparedStatement ps = null;
 		try {
+			// Connection 생성
+			// OracleDriver 클래스 코드
+			// OracleDriver 클래스가 저장된 ojdbc6.jar 파일을 classpath에 등록
+			Class.forName("oracle.jdbc.OracleDriver"); // 패키지에 저장된 oracle 클래스
 			
-			Class.forName("oracle.jdbc.OracleDriver");
+			// DB접속 
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "SCOTT";
 			String password = "TIGER";
 			con = DriverManager.getConnection(url, user, password);
 			
+			// 쿼리문 생성(변수 처리할 부분은 ?로 처리)
 			String sql = "INSERT INTO BOARD(BOARD_NO, TITLE, CONTENT, HIT, CREATE_DATE) VALUES(BOARD_SEQ.NEXTVAL, ?, ?, 0, SYSDATE)";
 			
+			// PreparedStatement 객체 생성
+			// 보안문제로 쓴다.
 			ps = con.prepareStatement(sql);
 			
 			// 쿼리문에 포함된 ?에 변수 전달하기
