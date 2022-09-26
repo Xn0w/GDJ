@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보수정</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text">@
+                    <input type = "text" list = "domains" name = "domains" placeholder = "선택 또는 입력">
+                    <datalist id = "domains">
+                        <option value = "naver.com"></option>
+                        <option value = "kakao.com"></option>
+                        <option value = "gmail.com"></option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>생일</td>
+                <td>
+                    <input type="text" maxlength="4" size="4">년
+                    <input type="text" maxlength="2" size="2">월
+                    <input type="text" maxlength="2" size="2">일
+                </td>
+            </tr>
+            <tr>
+                <td>거주도시</td>
+                <td>
+                    <select name = "city">
+                        <option value = "1" selected>서울</option>
+                        <option value = "2">광주</option>
+                        <option value = "3">대구</option>
+                        <option value = "4">대전</option>
+                        <option value = "5">부산</option>
+                        <option value = "6">울산</option>
+                        <option value = "7">인천</option>
+                        <option value = "8">기타</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    성별
+                </td>
+                <td>
+                    <input type = "radio" id = "male" name = "gender" value = "1">
+                    <label for = "male">남자</label>
+                    <input type = "radio" id = "female" name = "gender" value = "2">
+                    <label for = "female">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    관심분야
+                </td>
+                <td>
+                    <input type = "checkbox" id = "travel" name = "hobby" value = "1">
+                    <label for = "travel">여행</label>
+                    <input type = "checkbox" id = "movie" name = "hobby" value = "2">
+                    <label for = "movie">영화</label>
+                    <input type = "checkbox" id = "reading" name = "hobby" value = "3">
+                    <label for = "reading">독서</label>
+                    <input type = "checkbox" id = "music" name = "hobby" value = "4">
+                    <label for = "music">음악</label>
+                    <input type = "checkbox" id = "nothing" name = "hobby" value = "5">
+                    <label for = "nothing">관심없음</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    자기소개
+                </td>
+                <td>
+                    <textarea name = "me" id = "introduce" cols = "50" rows = "5"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a href="board.html">수정완료</a>
+</body>
+</html>
