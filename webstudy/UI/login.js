@@ -17,3 +17,5 @@ document.getElementById('id').onkeyup = function(event){
         id_msg.textContent = '정상적인 아이디입니다.';
     }
 }
+/* 아이디 비번이 4글자 이상일 때 넘어가야한다. */
+/* 그렇지 않은 경우 submit상태가 재현되야한다. */
