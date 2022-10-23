@@ -21,6 +21,7 @@ public class AnchorServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		// 요청
 		request.setCharacterEncoding("UTF-8");
 		

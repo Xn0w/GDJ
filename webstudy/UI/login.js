@@ -13,8 +13,11 @@ document.getElementById('id').onkeyup = function(event){
         id_msg.textContent =  '';
     } else if(id.value.length < 4) {
         id_msg.textContent = '아이디는 4자 이상입니다.';
+
     } else if (id.value.length >= 4) {
+    
         id_msg.textContent = '정상적인 아이디입니다.';
+
     }
 }
 /* 아이디 비번이 4글자 이상일 때 넘어가야한다. */
