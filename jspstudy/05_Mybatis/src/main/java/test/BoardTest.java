@@ -50,8 +50,8 @@ public class BoardTest {
 		// 제목 : 테스트
 		// 내용 : 테스트 내용
 		Board board = new Board();
-		board.setTitle("테스트2");
-		board.setContent("테스트 내용2");
+		board.setTitle("긴급공지");
+		board.setContent("롤토체스");
 		int result = BoardDao.getInstance().insertBoard(board);
 		assertEquals(1, result);
 	}
@@ -61,8 +61,8 @@ public class BoardTest {
 		// 제목 : 테스트2
 		// 내용 : 테스트 내용 2
 		Board board = new Board();
-		board.setTitle("테스트3");
-		board.setContent("테스트 내용3");
+		board.setTitle("공지");
+		board.setContent("대항해시대");
 		board.setBoardNo(1);
 		int result = BoardDao.getInstance().updateBoard(board);
 	}
