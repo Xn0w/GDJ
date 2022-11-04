@@ -56,43 +56,54 @@ public class MvcController {
 		// index.jsp로 forward했을까? redirect했을까?
 		// 정답 : forward했다.
 		// redirect할때는 return "redirect:경로"; 처럼 반환한다.
+		
 	}
 	
 	
 	
 	// <a href="${contextPath}/animal">
 	@RequestMapping(value="/animal", method=RequestMethod.GET)
-	
 	public String 동물보러가기() {
+		
 		// /WEB-INF/views/ + gallery/animal + .jsp
+		
 		return "gallery/animal";
+		
 	}
 	
 	// @RequestMapping(value="/animal", method=RequestMethod.GET)
-	// @RequestMapping(value="animal", method=RequestMethod.GET)	슬래시가 없어도 됩니다.
-	// @RequestMapping(value="/animal")								GET은 없어도 됩니다.	
-	// @RequestMapping("/animal")									value로 인식합니다.
-	// @RequestMapping("animal")									최종버전입니다.
+	// @RequestMapping(value="animal", method=RequestMethod.GET)   슬래시가 없어도 됩니다.
+	// @RequestMapping(value="/animal")                            GET은 없어도 됩니다.	
+	// @RequestMapping("/animal")                                  value로 인식합니다.
+	// @RequestMapping("animal")                                   최종버전입니다.
 	
+	
+	
+	// <a href="${contextPath}/flower">
 	@RequestMapping("flower")
 	public String 꽃보러가기() {
 		
-		// return "/gallery/flower"		슬래시(/)가 있어도 됩니다.
+		// return "/gallery/flower"   슬래시(/)가 있어도 됩니다.
 		
-		return "gallery/flower";	 // 슬래시(/)가 있어도 됩니다. 
+		return "gallery/flower";   // 슬래시(/)가 없어도 됩니다.
+		
 	}
+	
+	
 	
 	// <a href="${contextPath}/animal/flower">
 	@RequestMapping("animal/flower")
 	public String 동물보고꽃보고() {
 		
-		// redirect : 다음에는 항상 다른  URL Mapping을 적어 준다.
+		// redirect: 다음에는 항상 다른 URL Mapping을 적어 준다.
 		
-		return "redirect:/flower";	// 뒤에 flower는 jsp가 아닌 URL Mapping값이다.
+		return "redirect:/flower";
+		
 	}
 	
 	
-	// <a href="${contextPath}/want/animal?filename=animal5.jsp">
+	
+	// <a href="${contextPath}/want/animal?filename=animal5.jpg">
 	@RequestMapping("want/animal")
 	public String 동물5보기(HttpServletRequest request) {
 		
@@ -102,11 +113,13 @@ public class MvcController {
 		
 	}
 	
+	
+	
 	// <a href="${contextPath}/response">
 	@RequestMapping("response")
 	public void 응답만들기(HttpServletRequest request, HttpServletResponse response) {
 		
-		// 응답을 만들때는 return을 하지 않는다.
+		// 응답을 만들 때는 return을 하지 않는다.
 		
 		try {
 			response.setContentType("text/html; charset=UTF-8");
@@ -119,5 +132,7 @@ public class MvcController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
+	
 }
