@@ -51,7 +51,7 @@ public class DeleteWrongFiles {
 		
 		// 어제 업로드 된 파일 목록 중 DB에 기록된 파일이 아닌 목록
 		File dir = new File(path);
-		File[] wrongFiles = dir.listFiles(new FilenameFilter() {
+		File[] wrongFiles = dir.listFiles(new FilenameFilter() {	// 익명구현체
 			@Override
 			public boolean accept(File dir, String name) {
 				return !pathList.contains(new File(dir, name).toPath());

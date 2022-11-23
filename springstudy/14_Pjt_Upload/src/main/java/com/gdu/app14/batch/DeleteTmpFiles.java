@@ -19,6 +19,7 @@ public class DeleteTmpFiles {
 		String tmpPath = "storage" + File.separator + "temp";
 		File tmpDir = new File(tmpPath);
 		
+		// 디렉토리에 있는 파일들을 모두 모아 삭제
 		if(tmpDir.exists()) {
 			File[] tmpFiles = tmpDir.listFiles();
 			for(File tmp : tmpFiles) {
