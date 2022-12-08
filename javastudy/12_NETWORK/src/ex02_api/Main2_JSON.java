@@ -392,7 +392,7 @@ public class Main2_JSON {
 	}
 	
 	public static void main(String[] args) {
-		m1();
+		m7();
 	}
 	
 }

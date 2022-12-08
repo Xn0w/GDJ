@@ -17,30 +17,31 @@ public class StaffServiceImpl implements StaffService {
 	private StaffMapper staffMapper;
 	
 	@Override
-	public List<StaffDTO> getStaffList() {
-		
+	public List<StaffDTO> getAllStaffList() {
 		return staffMapper.selectStaffList();
 	}
 
 	@Override
 	public ResponseEntity<String> addStaff(StaffDTO staff) {
-		
 		try {
-			staff.setSalary(4000);
+			int salary = 0;
+			switch(staff.getDept()) {
+			case "기획부": salary = 5000; break;
+			case "개발부": salary = 6000; break;
+			case "영업부": salary = 7000; break;
+			default: salary = 4000;
+			}
+			staff.setSalary(salary);
 			staffMapper.insertStaff(staff);
-			return new ResponseEntity<String>("사원 등록이 성공했습니다.", HttpStatus.OK);
+			return new ResponseEntity<String>("사원 등록이 성공했습니다.", HttpStatus.OK);				
 		} catch(Exception e) {
 			return new ResponseEntity<String>("사원 등록이 실패했습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
-	@Override
-	public ResponseEntity<String> searchStaff(StaffDTO staff) {
-		try {
-			return new ResponseEntity<String>("조회에 성공했습니다.", HttpStatus.OK);
-		} catch (Exception e) {
-			return new ResponseEntity<String>("조회에 실패했습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
 
-		}
+	@Override
+	public StaffDTO findStaff(String query) {
+		return staffMapper.selectStaffBySno(query);
 	}
+
 }

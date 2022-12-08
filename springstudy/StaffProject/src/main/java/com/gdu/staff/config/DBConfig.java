@@ -12,6 +12,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -20,8 +21,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableTransactionManagement
 @Configuration
 public class DBConfig {
-	// db.properties 파일을 읽어서 변수에 저장하기
-	// ${프로퍼티명}
+
 	@Value(value = "${hikari.driver}")
 	private String driver;
 	
@@ -40,8 +40,6 @@ public class DBConfig {
 	@Value(value="${config.location}")
 	private String configLocation;
 	
-	
-	// HikariConfig
 	@Bean
 	public HikariConfig config() {
 		HikariConfig config = new HikariConfig();
@@ -52,15 +50,11 @@ public class DBConfig {
 		return config;
 	}
 	
-	
-	// HikariDataSource
 	@Bean(destroyMethod="close")
 	public HikariDataSource dataSource() {
 		return new HikariDataSource(config());
 	}
 	
-	
-	// SqlSessionFactory
 	@Bean
 	public SqlSessionFactory factory() throws Exception {
 		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
@@ -70,17 +64,14 @@ public class DBConfig {
 		return bean.getObject();
 	}
 	
-	
-	// SqlSessionTemplate
 	@Bean
 	public SqlSessionTemplate sqlSessionTemplate() throws Exception {
 		return new SqlSessionTemplate(factory());
 	}
 	
-	
-	// TransactionManager
 	@Bean
 	public TransactionManager transactionManager() {
 		return new DataSourceTransactionManager(dataSource());
-	}	
+	}
+	
 }

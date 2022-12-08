@@ -1,10 +1,10 @@
-<%@page import="java.util.Optional" %>
+<%@page import="java.util.Optional"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	Optional<String> opt = Optional.ofNullable(request.getParameter("title"));
 	String title = opt.orElse("Welcome");
-	pageContext.setAttribute("title", title);	// EL 사용을 위함 (${title}) , 외부에서 파라미터를 전달하기 위함
+	pageContext.setAttribute("title", title);  // EL사용을 위함 (${title})
 	pageContext.setAttribute("contextPath", request.getContextPath());
 %>
 <!DOCTYPE html>
@@ -21,7 +21,5 @@
 <body>
 
 	<div>
-		<h1>Welcome To My BLOG</h1>		
+		<h1>Welcome To My BLOG</h1>
 	</div>
-
-	
